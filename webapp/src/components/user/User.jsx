@@ -33,9 +33,9 @@ export function User({ open, onClose, user }) {
         <div className={styles.user}>
           	<p>
   				<strong>Callsign:</strong> 
-  				<span style={{ color: `hsl(${user?.color}, 70%, 50%)` }}>
+  				
     				{user?.callsign}
-  				</span>
+  				
 			</p>
 
           {user?.is_anonymous && 
