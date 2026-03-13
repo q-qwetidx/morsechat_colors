@@ -17,6 +17,7 @@ type ServeUserInfo_req struct {
 type ServeUserInfo_ok struct {
 	Username              string
 	Callsign              string
+	Color                 int
 	LastOnlineTimestamp   int64
 	RegistrationTimestamp int64
 }
