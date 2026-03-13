@@ -46,6 +46,7 @@ func ServeUserInfo(
 		resp := ServeUserInfo_ok{
 			Username:              res.Username,
 			Callsign:              res.Callsign,
+			Color:                 res.Color,
 			LastOnlineTimestamp:   res.LastOnlineTimestamp,
 			RegistrationTimestamp: res.RegistrationTimestamp,
 		}
