@@ -199,6 +199,7 @@ func ServeSessInit(
 				IsModerator: currentJwtData.IsModerator,
 				Username:    currentJwtData.Username,
 				Callsign:    currentJwtData.Callsign,
+				Color:       currentJwtData.Color,
 				Country:     responseCountry,
 				Settings:    responseSettings,
 			})
@@ -220,6 +221,7 @@ func ServeSessInit(
 			IsModerator: false,
 			Username:    "",
 			Callsign:    callsign,
+			Color:       150,
 		}
 		err = auth.SetJwtCookie(w, tokenAuth, jwtData)
 		if err != nil {
@@ -233,6 +235,7 @@ func ServeSessInit(
 			IsModerator: jwtData.IsModerator,
 			Username:    jwtData.Username,
 			Callsign:    jwtData.Callsign,
+			Color:       jwtData.Color,
 			Country:     country,
 			Settings:    nil,
 		})
@@ -261,6 +264,7 @@ func ServeLogout(
 			IsModerator: false,
 			Username:    "",
 			Callsign:    callsign,
+			Color:       150,
 		}
 		err = auth.SetJwtCookie(w, tokenAuth, jwtData)
 		if err != nil {
@@ -274,6 +278,7 @@ func ServeLogout(
 			IsModerator: jwtData.IsModerator,
 			Username:    jwtData.Username,
 			Callsign:    jwtData.Callsign,
+			Color:       jwtData.Color,
 			Country:     country,
 			Settings:    nil,
 		})
@@ -366,6 +371,7 @@ func ServeLogin(
 			IsModerator: res.IsModerator != 0,
 			Username:    res.Username,
 			Callsign:    res.Callsign,
+			Color:       res.Color,
 		}
 		err = auth.SetJwtCookie(w, tokenAuth, jwtData)
 		if err != nil {
@@ -379,6 +385,7 @@ func ServeLogin(
 			IsModerator: jwtData.IsModerator,
 			Username:    jwtData.Username,
 			Callsign:    jwtData.Callsign,
+			Color:       jwtData.Color
 			Country:     res.Callsign,
 			Settings:    responseSettings,
 		})
