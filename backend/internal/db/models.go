@@ -60,6 +60,7 @@ type User struct {
 	Username              string
 	Password              string
 	Callsign              string
+	Color                 int64
 	Country               interface{}
 	Settings              interface{}
 	IsBanned              int64
