@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS users (
   username               TEXT NOT NULL,
   password               TEXT NOT NULL,
   callsign               TEXT NOT NULL,
+  color                  INTEGER NOT NULL DEFAULT 200,
   country                TEXT NOT NULL DEFAULT "US", -- ISO 3166-1 alpha-2 format
   settings               TEXT NOT NULL DEFAULT "",   -- JSON
   is_banned              INTEGER NOT NULL DEFAULT 0, -- BOOLEAN
