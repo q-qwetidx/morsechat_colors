@@ -12,9 +12,9 @@ WHERE is_moderator == 1;
 
 /* name: CreateUser :execresult */
 INSERT INTO users (
-  username, password, callsign, country, registration_session
+  username, password, callsign, color, country, registration_session
 ) VALUES (
-  ?, ?, ?, ?, ?
+  ?, ?, ?, ?, ?, ?
 );
 
 /* name: CreateAnonUser :execresult */
