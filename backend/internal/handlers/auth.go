@@ -21,6 +21,7 @@ type RegisterData struct {
 	Username string `json:"username" validate:"required,min=3,max=20"`
 	Password string `json:"password" validate:"required,min=8,max=255"`
 	Callsign string `json:"callsign" validate:"required,min=4,max=10"`
+	Color    int64  `json:"color" validate:"required,min=0,max=255"`
 }
 
 func ServeRegister(
