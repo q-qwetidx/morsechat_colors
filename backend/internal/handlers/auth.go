@@ -78,6 +78,7 @@ func ServeRegister(
 			Username:            regData.Username,
 			Password:            hash,
 			Callsign:            regData.Callsign,
+			Color:               regData.Color,
 			Country:             countryCode,
 			RegistrationSession: device.Id,
 		})
