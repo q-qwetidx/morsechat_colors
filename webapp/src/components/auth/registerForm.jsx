@@ -13,7 +13,8 @@ const RegisterForm = ({setPage}) =>{
   let [form, setForm] = React.useState({
     username: '',
     password: '',
-    callsign: ''
+    callsign: '',
+	color:    150
   })
 
   const initialError = {
@@ -121,6 +122,20 @@ const RegisterForm = ({setPage}) =>{
         <Grid item xs={12} >
           <CallSignEditor setData={e => setForm(f => ({ ...f, callsign: e }))} />
         </Grid>
+		<Grid item xs={12}>
+  			<Typography variant="body1" color="primary">
+    			Callsign Color
+  			</Typography>
+  		<input
+    		type="color"
+    		onChange={e => {
+      		const hex = e.target.value
+      		const colorInt = parseInt(hex.slice(1), 16) % 256
+      		setForm(f => ({ ...f, color: colorInt }))
+    	}}
+  		/>
+		</Grid>
+
         <Grid item xs={12} >
           <Divider />
         </Grid>
